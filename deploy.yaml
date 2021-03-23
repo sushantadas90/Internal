@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: internal
+  name: internal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: internal
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: internal
+    spec:
+      containers:
+      - image: gcr.io/mar-roidtc519/internal-image:v1.0.0
+        name: internal-image
+        ports:
+        - containerPort: 8082
+        resources: {}
+status: {}
