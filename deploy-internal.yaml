@@ -18,7 +18,7 @@ spec:
         app: events-internal
     spec:
       containers:
-      - image: gcr.io/mar-roidtc503/internal-image:latest
+      - image: gcr.io/mar-roidtc503/internal-image:v2.0.1
         name: internal-image
         ports:
         - containerPort: 8082
